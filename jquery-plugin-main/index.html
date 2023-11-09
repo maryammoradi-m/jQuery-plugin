@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/jquery.lettering.js"></script>
+    <script src="assets/js/jquery.elevatezoom.js"></script>
+
+    <title>jquery plugin</title>
+    <link rel="stylesheet" href="assets/css/lettering.css" />
+    <link rel="stylesheet" href="assets/js/jquery.elevatezoom.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script>
+        $(document).ready(function () {
+
+            // lettering
+            $("#letter1").lettering("words").children("span").lettering();
+
+
+            // zoom
+            $('#img').elevateZoom({
+                tint: true,
+                tintColour: '#ffffff',
+                tintOpacity: 0.6,
+                lensShape: "round",
+                lensSize: 200,
+                zoomWindowFadeIn: 1000,
+                zoomWindowFadeOut: 1000,
+                lensFadeIn: 1000,
+                lensFadeOut: 1000,
+                easing: true,
+                zoomWindowWidth: 300,
+                zoomWindowHeight: 300,
+                zoomWindowPosition: 11,
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="letter1" class="animate__animated animate__rubberBand ">Learning Jquery Plugin</h1>
+
+    <br><br><br><br><br>
+
+    <img src="assets/img/4.jpg" data-zoom-image="assets/img/4.jpg" id="img" />
+
+
+
+</body>
+
+</html>
